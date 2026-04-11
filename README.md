@@ -5,7 +5,7 @@
 
 Dự án này tập trung vào việc xây dựng một thiết bị đo điện trở dựa trên vi điều khiển ESP32. Mục tiêu chính là nghiên cứu cách thức hoạt động của bộ chuyển đổi Analog-to-Digital (ADC) 12-bit trên ESP32, đồng thời tích hợp hiển thị dữ liệu thời gian thực qua giao thức I2C trên màn hình OLED.
 
-Điểm đặc biệt của dự án là việc phân tích và xử lý sai số phi tuyến tính của ESP32 – một thách thức phổ biến khi làm việc với các dòng chip giá rẻ nhưng có hiệu năng xử lý mạnh mẽ này.
+Điểm đặc biệt là việc phân tích và xử lý sai số phi tuyến tính của ESP32 – một thách thức phổ biến khi làm việc với các dòng chip giá rẻ nhưng có hiệu năng xử lý mạnh mẽ này.
 
 # 🛠 Phần cứng và Vật liệu 
 Dưới đây là danh sách các linh kiện được sử dụng trong dự án:
@@ -72,17 +72,16 @@ Việc thực hiện dự án được chia làm hai giai đoạn chính: Lắp 
   ![z7716042692215_7896b5b049b080c4da5bbb066ab3572c](https://github.com/user-attachments/assets/37a427f1-df17-415d-9d69-57dae2d68be7)
 
 # Học được gì từ project 
-Sau khi hoàn thành dự án thiết kế Ôm-kế với ESP32, tôi đã đúc kết được những kiến thức và kỹ năng quan trọng sau:
+Sau khi hoàn thành dự án thiết kế Ôm-kế với ESP32, tôi đã có được thêm những kiến thức và kỹ năng quan trọng sau:
 
 1. Hiểu sâu về đặc tính ADC của ESP32 Độ phân giải và Thực tế: Mặc dù ESP32 có ADC 12-bit 2^12 = 4096, nhưng thực tế dải đo không hoàn toàn tuyến tính.
-     Tôi đã học được rằng không thể tin tưởng tuyệt đối vào công thức toán học lý thuyết mà cần có bước Calibration.
      Xử lý nhiễu: Tín hiệu Analog rất dễ bị nhiễu bởi môi trường.
      Việc áp dụng kỹ thuật Oversampling là bắt buộc để có một con số hiển thị ổn định, không bị nhảy liên tục.
 
-3. Làm chủ giao thức I2C Tối ưu hóa kết nối: Tôi đã hiểu cách thức hoạt động của bus I2C chỉ với 2 dây SDA và SCL để điều khiển màn hình OLED.
+2. Giao thức I2C giúp tối ưu hóa kết nối: Tôi đã hiểu cách thức hoạt động của bus I2C chỉ với 2 dây SDA và SCL để điều khiển màn hình OLED.
      Điều này giúp tiết kiệm tài nguyên chân GPIO cho các mục đích khác.
      Quản lý thư viện: Cách tích hợp và sử dụng các thư viện phần cứng như Adafruit_SSD1306 để thiết kế giao diện trực quan.
 
-4. Quy trình phát triển dự án chuẩn mô phỏng trước khi lắp đặt:
+3. Quy trình phát triển dự án chuẩn mô phỏng trước khi lắp đặt:
     Sử dụng các công cụ như Wokwi giúp kiểm tra tính đúng đắn của logic code và sơ đồ nối dây, giảm thiểu rủi ro làm hỏng linh kiện thật.
     Tư duy lập trình có cấu trúc: Chia nhỏ chương trình thành các tab (.ino) riêng biệt giúp mã nguồn dễ quản lý, bảo trì và mở rộng sau này.
