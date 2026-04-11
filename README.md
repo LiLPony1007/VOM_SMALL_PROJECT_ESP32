@@ -1,5 +1,5 @@
 # VOM_SMALL_PROJECT_EPS32
-📝 Giới thiệu dự án
+# 📝 Giới thiệu dự án
 ![z7716042692885_a50d0d34f0f6eb07ac7dab6c8332fa82](https://github.com/user-attachments/assets/770851da-dd9c-4fac-a185-180c0f3a0bf8)
 
 
@@ -7,7 +7,7 @@ Dự án này tập trung vào việc xây dựng một thiết bị đo điện
 
 Điểm đặc biệt của dự án là việc phân tích và xử lý sai số phi tuyến tính của ESP32 – một thách thức phổ biến khi làm việc với các dòng chip giá rẻ nhưng có hiệu năng xử lý mạnh mẽ này.
 
-🛠 Phần cứng và Vật liệu 
+# 🛠 Phần cứng và Vật liệu 
 Dưới đây là danh sách các linh kiện được sử dụng trong dự án:
 
 ![z7716042683275_01e946cb15bc3f0dfebfcf33478da4f0](https://github.com/user-attachments/assets/16263b02-8d6b-4337-83d5-86d27f9404d0)
