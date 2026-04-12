@@ -45,52 +45,7 @@ Giao thức: I2C.
    
    <img width="600" height="167" alt="Screenshot 2026-04-11 224838" src="https://github.com/user-attachments/assets/7db5712e-5efc-4c3b-a873-b598b0c7e67c" />
    
-# ⚙️ Thực hiện 
 
-Việc thực hiện dự án được chia làm hai giai đoạn chính: Lắp đặt phần cứng và Xử lý phần mềm.
-   
-   1. Lắp đặt phần cứng dựa trên mô phỏng
-
-<img width="1259" height="642" alt="Screenshot 2026-04-11 230830" src="https://github.com/user-attachments/assets/f19d6697-6c9f-4290-b864-f66d412105ae" />
-
-
-   Dựa trên sơ đồ Wokwi, mạch được triển khai với cấu trúc tối ưu:
-     +Mạch cầu phân áp: Sử dụng điện trở mẫu 5kOmega.
-       Điểm giữa của cầu phân áp được nối vào chân GPIO35 để đọc giá trị Analog.
-       Giao tiếp hiển thị I2C:Màn hình OLED SSD1306 kết nối với ESP32 qua chân GPIO21 (SDA) và GPIO22 (SCL).
-       Nguồn cấp 3.3V và GND được lấy trực tiếp từ các chân nguồn của ESP32.
-       Bộ phận điều khiển:Một nút nhấn được kết nối với chân GPIO4 để thực hiện tính năng chuyển đổi chế độ đo.
-  
-   2. Xử lý phần mềm và Thuật toán
-     +Phần mềm được thiết kế để tối ưu hóa độ chính xác của bộ ADC 12-bit trên ESP32 thông qua các bước:
-       Khởi tạo hệ thống: Thiết lập thư viện Adafruit_SSD1306 cho I2C và cấu hình các chân pinMode cho nút nhấn và ADC.
-      +Lưu ý cho việc thiết kế nút bấm:
-         -sau khi khai báo chân nút bấm đến phần setup() ta cần chỉnh cho nó về chế độ INPUT_PULLUP thay vì INPUT thông thường bởi khi khai báo INPUT ta phải nối 1 điện trở với chân nút bấm trước khi về chân GPIOĐiện áp hoạt động: 3.3V.
-
-2. Thiết bị hiển thị
-Màn hình OLED 0.96 inch:
-
-Công nghệ: SSD1306.
-
-Giao thức: I2C.
-
-Độ phân giải: 128x64 pixel.
-# 🪬 CÁC KHÁI NIỆM CẦN BIẾT
-
-1. ADC (Analog-to-Digital Converter) là bộ chuyển đổi tín hiệu tương tự sang tín hiệu số.
-    Định nghĩa: Trong thế giới thực, các đại lượng như nhiệt độ, ánh sáng hay điện áp là liên tục. ADC ghi các mức điện áp đó và biến chúng thành các con số mà vi điều khiển như ESP32 có thể hiểu và xử lý được.
-   Thông số quan trọng: Độ phân giải. Với ESP32 là 12-bit, nghĩa là nó chia dải điện áp từ 0V đến 3.3V thành 2^12 = 4096 mức nhỏ để đo lường.
-   Các loại khác của ADC.
-   <img width="1246" height="882" alt="Screenshot 2026-04-12 202140" src="https://github.com/user-attachments/assets/3f30bd9c-aa7a-4593-bf93-dc2496ba1a5e" />
-
-
-3. I2C (Inter-Integrated Circuit) là một giao thức giao tiếp nối tiếp đồng bộ giữa các vi mạch.
-    Định nghĩa: Đây là một cách thức giao tiếp giữa vi điều khiển gọi là Master và các thiết bị ngoại vi như màn hình OLED, cảm biến là Slaves chỉ thông qua 2 sợi dây duy nhất:
-   +SDA (Serial Data): Đường truyền dữ liệu hai chiều.
-   +SCL (Serial Clock): Đường truyền tín hiệu nhịp xung để đồng bộ thời gian.
-   Ưu điểm: Cho phép kết nối nhiều thiết bị trên cùng một bus dây bằng cách phân biệt qua địa chỉ riêng biệt của mỗi thiết bị, giúp tiết kiệm tối đa chân cắm cho ESP32.
-   
-   <img width="600" height="167" alt="Screenshot 2026-04-11 224838" src="https://github.com/user-attachments/assets/7db5712e-5efc-4c3b-a873-b598b0c7e67c" />
    
 # ⚙️ Thực hiện 
 
