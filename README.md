@@ -34,8 +34,8 @@ Dưới đây là danh sách các linh kiện được sử dụng trong dự á
 <img width="1216" height="891" alt="DATASHEET_ESP32" src="https://github.com/user-attachments/assets/ba58c448-65d6-4f93-9db5-be83d4b46cac" />
 
 
-    * Thông số quan trọng: Độ phân giải. Với ESP32 là 12-bit, nghĩa là nó chia dải điện áp từ 0V đến 3.3V thành 2^12 = 4096 mức nhỏ để đo lường.
-    * Các loại khác của ADC:
+   * Thông số quan trọng: Độ phân giải. Với ESP32 là 12-bit, nghĩa là nó chia dải điện áp từ 0V đến 3.3V thành 2^12 = 4096 mức nhỏ để đo lường.
+   * Các loại khác của ADC:
 
    <img width="1246" height="882" alt="Screenshot 2026-04-12 202140" src="https://github.com/user-attachments/assets/3f30bd9c-aa7a-4593-bf93-dc2496ba1a5e" />
 
