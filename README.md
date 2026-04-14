@@ -34,17 +34,17 @@ Dưới đây là danh sách các linh kiện được sử dụng trong dự á
 <img width="1216" height="891" alt="DATASHEET_ESP32" src="https://github.com/user-attachments/assets/ba58c448-65d6-4f93-9db5-be83d4b46cac" />
 
 
-   * Thông số quan trọng: Độ phân giải. Với ESP32 là 12-bit, nghĩa là nó chia dải điện áp từ 0V đến 3.3V thành 2^12 = 4096 mức nhỏ để đo lường.
-   * Các loại khác của ADC:
+    * Thông số quan trọng: Độ phân giải. Với ESP32 là 12-bit, nghĩa là nó chia dải điện áp từ 0V đến 3.3V thành 2^12 = 4096 mức nhỏ để đo lường.
+    * Các loại khác của ADC:
 
    <img width="1246" height="882" alt="Screenshot 2026-04-12 202140" src="https://github.com/user-attachments/assets/3f30bd9c-aa7a-4593-bf93-dc2496ba1a5e" />
 
 
 2. I2C (Inter-Integrated Circuit) là một giao thức giao tiếp nối tiếp đồng bộ giữa các vi mạch.
-       * Định nghĩa: Đây là một cách thức giao tiếp giữa vi điều khiển gọi là Master và các thiết bị ngoại vi như màn hình OLED, cảm biến là Slaves chỉ thông qua 2 sợi dây duy nhất:
-       * SDA (Serial Data): Đường truyền dữ liệu hai chiều.
-       * SCL (Serial Clock): Đường truyền tín hiệu nhịp xung để đồng bộ thời gian.
-         * Ưu điểm: Cho phép kết nối nhiều thiết bị trên cùng một bus dây bằng cách phân biệt qua địa chỉ riêng biệt của mỗi thiết bị, giúp tiết kiệm tối đa chân cắm cho ESP32. 
+   * Định nghĩa: Đây là một cách thức giao tiếp giữa vi điều khiển gọi là Master và các thiết bị ngoại vi như màn hình OLED, cảm biến là Slaves chỉ thông qua 2 sợi dây duy nhất:
+   * SDA (Serial Data): Đường truyền dữ liệu hai chiều.
+   * SCL (Serial Clock): Đường truyền tín hiệu nhịp xung để đồng bộ thời gian.
+   * Ưu điểm: Cho phép kết nối nhiều thiết bị trên cùng một bus dây bằng cách phân biệt qua địa chỉ riêng biệt của mỗi thiết bị, giúp tiết kiệm tối đa chân cắm cho ESP32. 
    
    <img width="600" height="167" alt="Screenshot 2026-04-11 224838" src="https://github.com/user-attachments/assets/7db5712e-5efc-4c3b-a873-b598b0c7e67c" />
    
