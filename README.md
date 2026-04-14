@@ -3,9 +3,9 @@
 ![z7716042692885_a50d0d34f0f6eb07ac7dab6c8332fa82](https://github.com/user-attachments/assets/770851da-dd9c-4fac-a185-180c0f3a0bf8)
 
 
-Dự án này tập trung vào việc xây dựng một thiết bị đo điện trở dựa trên vi điều khiển ESP32. Mục tiêu chính là nghiên cứu cách thức hoạt động của bộ chuyển đổi Analog-to-Digital (ADC) 12-bit trên ESP32, đồng thời tích hợp hiển thị dữ liệu thời gian thực qua giao thức I2C trên màn hình OLED.
+* Dự án này tập trung vào việc xây dựng một thiết bị đo điện trở dựa trên vi điều khiển ESP32. Mục tiêu chính là nghiên cứu cách thức hoạt động của bộ chuyển đổi Analog-to-Digital (ADC) 12-bit trên ESP32, đồng thời tích hợp hiển thị dữ liệu thời gian thực qua giao thức I2C trên màn hình OLED.
 
-Điểm đặc biệt là việc phân tích và xử lý sai số phi tuyến tính của ESP32 – một thách thức phổ biến khi làm việc với các dòng chip giá rẻ nhưng có hiệu năng xử lý mạnh mẽ này.
+* Điểm đặc biệt là việc phân tích và xử lý sai số phi tuyến tính của ESP32 – một thách thức phổ biến khi làm việc với các dòng chip giá rẻ nhưng có hiệu năng xử lý mạnh mẽ này.
 
 # 🛠 Phần cứng và Vật liệu 
 Dưới đây là danh sách các linh kiện được sử dụng trong dự án:
@@ -35,7 +35,7 @@ Dưới đây là danh sách các linh kiện được sử dụng trong dự á
 
 
    * Thông số quan trọng: Độ phân giải. Với ESP32 là 12-bit, nghĩa là nó chia dải điện áp từ 0V đến 3.3V thành 2^12 = 4096 mức nhỏ để đo lường.
-    Các loại khác của ADC.
+   * Các loại khác của ADC:
 
    <img width="1246" height="882" alt="Screenshot 2026-04-12 202140" src="https://github.com/user-attachments/assets/3f30bd9c-aa7a-4593-bf93-dc2496ba1a5e" />
 
@@ -52,7 +52,7 @@ Dưới đây là danh sách các linh kiện được sử dụng trong dự á
    
 # ⚙️ Thực hiện 
 
-Việc thực hiện dự án được chia làm hai giai đoạn chính: Lắp đặt phần cứng và Xử lý phần mềm.
+* Việc thực hiện dự án được chia làm hai giai đoạn chính: Lắp đặt phần cứng và Xử lý phần mềm.
    
 1. Lắp đặt phần cứng dựa trên mô phỏng
 
@@ -84,7 +84,10 @@ Việc thực hiện dự án được chia làm hai giai đoạn chính: Lắp 
       * Công thức tính điện trở đo được
       
        <img width="395" height="131" alt="Screenshot 2026-04-12 220756" src="https://github.com/user-attachments/assets/c3342d6f-6d1e-456e-b5ea-365eb6447b1b" />
+
+       
       * Giá trị ADC
+
       
         <img width="438" height="150" alt="Screenshot 2026-04-12 220902" src="https://github.com/user-attachments/assets/77e72ff7-b07d-4107-a844-0a33df9f659b" />
 
@@ -101,7 +104,6 @@ Việc thực hiện dự án được chia làm hai giai đoạn chính: Lắp 
   ![z7716042692215_7896b5b049b080c4da5bbb066ab3572c](https://github.com/user-attachments/assets/37a427f1-df17-415d-9d69-57dae2d68be7)
 
 # 📝 Học được gì từ project 
-Sau khi hoàn thành dự án thiết kế Ôm-kế với ESP32, tôi đã có được thêm những kiến thức và kỹ năng quan trọng sau:
 
 1. Hiểu sâu về đặc tính ADC của ESP32 Độ phân giải và Thực tế: Mặc dù ESP32 có ADC 12-bit 2^12 = 4096, nhưng thực tế dải đo không hoàn toàn tuyến tính.
      * Xử lý nhiễu: Tín hiệu Analog rất dễ bị nhiễu bởi môi trường.
