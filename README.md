@@ -71,8 +71,11 @@ Dưới đây là danh sách các linh kiện được sử dụng trong dự á
    * Khởi tạo hệ thống: Thiết lập thư viện Adafruit_SSD1306 cho I2C và cấu hình các chân pinMode cho nút nhấn và ADC.
    * Lưu ý cho việc thiết kế nút bấm:
       * sau khi khai báo chân nút bấm đến phần setup() ta cần chỉnh cho nó về chế độ INPUT_PULLUP thay vì INPUT thông thường bởi khi khai báo INPUT ta phải nối 1 điện trở với chân nút bấm trước khi về chân GPIO để tránh trạng thái Floating, INPUT_PULLUP sẽ kích hoạt một điện trở có sẵn bên trong chip để kéo chân đó lên mức HIGH mặc định.
+  
       <img width="665" height="492" alt="Screenshot 2026-04-12 215134" src="https://github.com/user-attachments/assets/33e18641-441e-4659-9932-0f84056c46ae" />
-      * Về code: 
+      
+      * Về code:
+        
        <img width="559" height="193" alt="Screenshot 2026-04-12 214738" src="https://github.com/user-attachments/assets/78ba7352-40d3-42f7-b774-1e23186f8d3c" />
 
       * Kỹ thuật lấy mẫu: Thay vì đọc một giá trị đơn lẻ, chương trình thực hiện đọc 64 lần liên tiếp và lấy giá trị trung bình.
