@@ -29,37 +29,6 @@ Dưới đây là danh sách các linh kiện được sử dụng trong dự á
 # 🪬 CÁC KHÁI NIỆM CẦN BIẾT
 
 1. ADC (Analog-to-Digital Converter) là bộ chuyển đổi tín hiệu tương tự sang tín hiệu số.
-   * Định nghĩa: Trong thế giới thực, các đại lượng như nhiệt độ, ánh sáng hay điện áp là liên tục. ADC ghi các mức điện áp đó và biến chúng thành các con số mà vi điều khiển như ESP32 có thể hiểu và xử lý được qua các chân chuyên dụng nhận ADCOM_SMALL_PROJECT_ESP32
-# 📝 Giới thiệu dự án
-![z7716042692885_a50d0d34f0f6eb07ac7dab6c8332fa82](https://github.com/user-attachments/assets/770851da-dd9c-4fac-a185-180c0f3a0bf8)
-
-
-Dự án này tập trung vào việc xây dựng một thiết bị đo điện trở dựa trên vi điều khiển ESP32. Mục tiêu chính là nghiên cứu cách thức hoạt động của bộ chuyển đổi Analog-to-Digital (ADC) 12-bit trên ESP32, đồng thời tích hợp hiển thị dữ liệu thời gian thực qua giao thức I2C trên màn hình OLED.
-
-Điểm đặc biệt là việc phân tích và xử lý sai số phi tuyến tính của ESP32 – một thách thức phổ biến khi làm việc với các dòng chip giá rẻ nhưng có hiệu năng xử lý mạnh mẽ này.
-
-# 🛠 Phần cứng và Vật liệu 
-Dưới đây là danh sách các linh kiện được sử dụng trong dự án:
-
-![z7716042683275_01e946cb15bc3f0dfebfcf33478da4f0](https://github.com/user-attachments/assets/16263b02-8d6b-4337-83d5-86d27f9404d0)
-
-
-1. Vi điều khiển trung tâm
-  * ESP32 DevKit V1: Độ phân giải ADC: 12-bit được tính theo công thức 2^M-1 mức tương đương 0 - 4095.
-
-  * Điện áp hoạt động: 3.3V.
-
- 2. Thiết bị hiển thị
-  * Màn hình OLED 0.96 inch:
-
-  * Công nghệ: SSD1306.
-
-  * Giao thức giao tiếp: I2C.
-
-  * Độ phân giải: 128x64 pixel.
-# 🪬 CÁC KHÁI NIỆM CẦN BIẾT
-
-1. ADC (Analog-to-Digital Converter) là bộ chuyển đổi tín hiệu tương tự sang tín hiệu số.
    * Định nghĩa: Trong thế giới thực, các đại lượng như nhiệt độ, ánh sáng hay điện áp là liên tục. ADC ghi các mức điện áp đó và biến chúng thành các con số mà vi điều khiển như ESP32 có thể hiểu và xử lý được qua các chân chuyên dụng nhận tín hiệu ADC như GPIO pin 4, 2, 15,...
 
 <img width="1216" height="891" alt="DATASHEET_ESP32" src="https://github.com/user-attachments/assets/ba58c448-65d6-4f93-9db5-be83d4b46cac" />
