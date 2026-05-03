@@ -4,14 +4,14 @@
 
 ## Table of Contents
 
-[Overview](#overview)
-[Hardware](#hardware)
-[Key Concepts](#key-concepts)
-[Implementation](#implementation)
-[Results](#results)
-[Lessons Learned](#lessons-learned)
-[Strengths & Limitations](#strengths--limitations)
-[Upgrade Path](#upgrade-path)
+- [Overview](#overview)
+- [Hardware](#hardware)
+- [Key Concepts](#key-concepts)
+- [Implementation](#implementation)
+- [Results](#results)
+- [Lessons Learned](#lessons-learned)
+- [Strengths & Limitations](#strengths--limitations)
+- [Upgrade Path](#upgrade-path)
 
 
 ## Overview
@@ -43,8 +43,6 @@ The ESP32's 12-bit ADC divides the 0–3.3 V input range into 4096 discrete leve
 
 > Known limitation: The ESP32 ADC is not perfectly linear — it saturates near 0 V and 3.3 V and has a nonlinear response curve in between. Software calibration is required for accurate readings.
 
-
-   <img width="1246" height="882" alt="Screenshot 2026-04-12 202140" src="https://github.com/user-attachments/assets/3f30bd9c-aa7a-4593-bf93-dc2496ba1a5e" />
 
 ### I2C — Inter-Integrated Circuit
 I2C enables the ESP32 (Master) to communicate with the OLED display (Slave) over just two wires:
@@ -79,10 +77,7 @@ Using INPUT_PULLUP activates the ESP32's internal pull-up resistor, keeping the 
   pinMode(BUTTON_PIN, INPUT_PULLUP);
 ```
   
-   <img width="665" height="492" alt="Screenshot 2026-04-12 215134" src="https://github.com/user-attachments/assets/33e18641-441e-4659-9932-0f84056c46ae" />
-
-        
-   <img width="559" height="193" alt="Screenshot 2026-04-12 214738" src="https://github.com/user-attachments/assets/78ba7352-40d3-42f7-b774-1e23186f8d3c" />
+  
 
  ### Oversampling for noise reduction
 Instead of reading a single ADC value, the firmware averages 64 consecutive samples to suppress electrical noise and produce a stable output:
