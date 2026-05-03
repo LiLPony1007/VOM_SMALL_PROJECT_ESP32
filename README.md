@@ -101,17 +101,6 @@ R_unknown = R_ref × ADC_value / (4095 - ADC_value)
 ```
 A nonlinearity correction factor is then applied in software to compensate for the ESP32 ADC's response curve and minimize measurement error.
       
-   <img width="395" height="131" alt="Screenshot 2026-04-12 220756" src="https://github.com/user-attachments/assets/c3342d6f-6d1e-456e-b5ea-365eb6447b1b" />
-
-       
- 
-      
-   <img width="438" height="150" alt="Screenshot 2026-04-12 220902" src="https://github.com/user-attachments/assets/77e72ff7-b07d-4107-a844-0a33df9f659b" />
-
-     
-     
-  <img width="484" height="147" alt="Screenshot 2026-04-12 220950" src="https://github.com/user-attachments/assets/e0608a74-2a1c-4c18-a35f-75b8de19dd89" />
-
   
 
 # Results 
