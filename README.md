@@ -1,11 +1,26 @@
-# VOM_SMALL_PROJECT_ESP32
-# 📝 Giới thiệu dự án
+# ESP32 Digital Ohmmeter & Voltmeter
+> A precision resistance and voltage measurement device built on the ESP32 microcontroller, featuring real-time OLED display via I2C and nonlinearity correction for the onboard 12-bit ADC.
 ![z7716042692885_a50d0d34f0f6eb07ac7dab6c8332fa82](https://github.com/user-attachments/assets/770851da-dd9c-4fac-a185-180c0f3a0bf8)
 
+## Table of Contents
 
-* Dự án này tập trung vào việc xây dựng một thiết bị đo điện trở dựa trên vi điều khiển ESP32. Mục tiêu chính là nghiên cứu cách thức hoạt động của bộ chuyển đổi Analog-to-Digital (ADC) 12-bit trên ESP32, đồng thời tích hợp hiển thị dữ liệu thời gian thực qua giao thức I2C trên màn hình OLED.
+Overview
+Hardware
+Key Concepts
+Implementation
+Results
+Lessons Learned
+Strengths & Limitations
+Upgrade Path
 
-* Điểm đặc biệt là việc phân tích và xử lý sai số phi tuyến tính của ESP32 – một thách thức phổ biến khi làm việc với các dòng chip giá rẻ nhưng có hiệu năng xử lý mạnh mẽ này.
+
+Overview
+This project explores the practical capabilities and limitations of the ESP32's onboard 12-bit ADC by building a functional dual-mode measurement tool. The device measures unknown resistance values using a voltage divider circuit and can switch to direct voltage measurement mode via a physical button.
+Core challenges addressed:
+
+Handling the nonlinear ADC response inherent to the ESP32 chip
+Reducing noise through oversampling (64-sample averaging)
+Displaying stable, real-time data over I2C to an SSD1306 OLED
 
 # 🛠 Phần cứng và Vật liệu 
 Dưới đây là danh sách các linh kiện được sử dụng trong dự án:
